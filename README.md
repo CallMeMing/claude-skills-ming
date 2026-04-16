@@ -34,6 +34,10 @@
 3.  **激活**：
     在 Claude Code 终端输入 `/reload`。
 
+### 快速安装命令 (Mac/Linux):
+    
+    'git clone https://github.com/CallMeMing/claude-skills-ming.git && cp -r claude-skills-ming/* ~/.claude/skills/'
+
 ---
 
 ### 💡 使用示例
