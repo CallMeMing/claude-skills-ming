@@ -1,4 +1,56 @@
 
+# 🤖 Claude Code UI Helpers (2-in-1 Skills)
+
+This repository contains two expert-level skills designed for **Claude Code**, focusing on solving "Component Selection" and "Visual Inconsistency" in modern frontend development.
+
+### 🚀 Key Use Cases
+
+* **Scenario A: Should I create a new component?**
+    * Use the `Component-Guide` skill. It automatically scans your codebase to decide whether to "Reuse," "Refactor," or "Create" a component, preventing code duplication.
+* **Scenario B: Getting UI bugs from your designer?**
+    * Use the `Design-Linter` skill. It detects non-standard spacing (e.g., `mt-[2px]`), enforces icon coloring protocols, and validates design tokens/variables.
+
+
+
+### 📦 Included Skills
+
+1.  **Component-Guide (Smart Component Management)**
+    * **Features**: Requirement analysis -> Similarity search -> Decision making.
+    * **Tech Stack**: Optimized for React + TS, Radix UI, and Tailwind v4.
+2.  **Design-Linter (Visual Spec Audit)**
+    * **Features**: Auto-detects CSS variable violations, enforces semantic typography, and supports CI/CD integration.
+    * **Output**: Supports Markdown reports, JSON, and simple text.
+
+
+### 🛠️ Quick Installation (Mac/Linux)
+
+Copy and paste the following command into your terminal to clone and install these skills to your Claude Code directory:
+
+```bash
+git clone https://github.com/CallMeMing/claude-skills-ming.git && cp -r claude-skills-ming/design-linter claude-skills-ming/component-guide ~/.claude/skills/
+```
+
+*Note: For Windows users, please manually copy the folders to `C:\Users\<YourUsername>\.claude\skills\`.*
+
+
+
+### 💡 Usage Examples
+
+```bash
+# Analyze if a new component is needed
+/component-guide "I need a searchable multi-select dropdown"
+
+# Audit visual specs for a specific file
+/design-linter --file src/components/Button.tsx
+```
+
+
+
+### 📄 License
+MIT License - Feel free to use and contribute.
+
+---
+
 # 🤖 Claude Code 智能 UI 助手 (2-in-1 Skills)
 
 本仓库包含两套专为 **Claude Code** 打造的专家级技能，旨在解决前端开发中“组件选型难”和“视觉还原不标准”的两大痛点。
@@ -10,7 +62,7 @@
 * **场景 B：UI 还原度总是被 UI 提 Bug？**
     * 使用 `Design-Linter` 走查器。自动检测代码中的间距、字体、颜色是否符合设计规范（如：禁止硬编码颜色、强制使用语义化字体类）。
 
----
+
 
 ### 📦 包含的技能 (Skills)
 
@@ -21,7 +73,7 @@
     * **核心功能**：自动发现 `mt-[2px]` 等非标间距，强制 Icon 着色协议，校验颜色变量。
     * **支持格式**：Markdown 报告、JSON、CI/CD 集成。
 
----
+
 
 ### 🛠️ 快速安装
 
@@ -38,7 +90,7 @@
     
     git clone https://github.com/CallMeMing/claude-skills-ming.git && cp -r claude-skills-ming/* ~/.claude/skills/
 
----
+
 
 ### 💡 使用示例
 
@@ -50,7 +102,6 @@
 /design-linter --file src/components/Button.tsx
 ```
 
----
 
 ### 📄 许可证
 MIT License - 欢迎自由使用及贡献。
