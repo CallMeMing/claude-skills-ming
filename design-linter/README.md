@@ -1,4 +1,21 @@
-# 设计规范走查器使用指南
+# Design-linter 设计规范走查器使用指南
+
+This skill supports both Chinese and English. You can interact with it in English directly. No configuration needed.
+
+### What This Skill Does
+Design-Linter automatically checks your generated code against design system specifications. It detects violations in:
+- Spacing constraints (vertical ≥8px, horizontal ≥4px)
+- Typography semantic classes (no text-[14px], must use text-te-*)
+- Icon coloring protocol (must specify explicit colors)
+- Padding grading (sm/md/lg levels)
+
+### How to Use
+Simply paste your code and ask for a design review. For example:
+- "Check this component for design violations"
+- "Review my button code"
+- "Lint this file"
+
+The skill will analyze your code and provide detailed violation reports with fix suggestions.
 
 ## 快速开始
 
