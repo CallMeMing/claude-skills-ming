@@ -1,7 +1,20 @@
 ---
 name: component-guide
-description: 智能组件管理助手，根据用户指令自动判断是否创建新组件、复用现有组件，或在需要时询问用户创建决策。基于设计系统规范，确保组件一致性和合规性。
+description: An intelligent component management assistant that automatically determines whether to create new components, reuse existing ones, or ask users for decisions based on their instructions. Ensures component consistency and compliance based on design system specifications. | 智能组件管理助手，根据用户指令自动判断是否创建新组件、复用现有组件，或在需要时询问用户创建决策。基于设计系统规范，确保组件一致性和合规性。
+
 ---
+
+## 🌐 Language Policy (i18n)
+
+**Language Detection:** Detect the language of the user's input.
+
+**Response Consistency:** Always respond in the same language as the user's input (e.g., if the user asks in English, output the report and suggestions in English; if in Chinese, use Chinese).
+
+**Core Logic:** The internal rules and design specs (like spacing, colors) remain the same regardless of the language.
+
+**For English Users:** When recommending component reuse vs. creation, explain clearly why one approach is preferred:
+- **Reuse existing:** Explain how the existing component already meets their needs, or how it can be extended with minimal changes
+- **Create new:** Explain what unique functionality requires a new component, and how it will integrate with existing ones
 
 # 组件使用手册技能
 
