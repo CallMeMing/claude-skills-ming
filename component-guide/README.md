@@ -1,5 +1,23 @@
 # Component-Guide 智能组件管理助手
 
+
+This skill supports both Chinese and English. You can interact with it in English directly. No configuration needed.
+
+### What This Skill Does
+Component-Guide is an intelligent component management assistant that helps you decide whether to create new components or reuse existing ones. It:
+- Automatically checks your codebase for similar components
+- Enforces design system consistency (spacing, typography, colors, etc.)
+- Guides you through component creation decisions with clear options
+
+### How to Use
+Simply describe what you need in natural language. For example:
+- "I need a button with an icon"
+- "Create a user profile card component"
+- "Use a modal dialog"
+
+The skill will analyze your request, check existing components, and help you make the best decision.
+
+
 ## 背景
 
 在现代前端开发中，组件复用是提高开发效率、保证代码一致性的关键。然而，随着项目规模扩大，开发者常常面临一个困境：是应该创建新组件，还是复用现有组件？过度创建会导致组件库臃肿，过度复用又可能让组件承担过多职责。
