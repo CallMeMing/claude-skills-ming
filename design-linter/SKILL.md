@@ -1,7 +1,17 @@
 ---
 name: design-linter
-description: 设计规范走查器，自动检测生成的代码是否违反设计系统规范。启动时模糊搜索项目内的设计系统文档（支持多种命名），让用户选择规范来源；未找到时引导用户选择 CSS 变量文件或使用内置规则兜底。
+description: A design specification linter that automatically detects code violations against design system specifications. On startup, it fuzzy searches for design system documentation in the project and lets users select the specification source; if none is found, it guides users to select a CSS variables file or uses built-in rules. | 设计规范走查器，自动检测生成的代码是否违反设计系统规范。启动时模糊搜索项目内的设计系统文档（支持多种命名），让用户选择规范来源；未找到时引导用户选择 CSS 变量文件或使用内置规则兜底。
 ---
+
+## 🌐 Language Policy (i18n)
+
+**Language Detection:** Detect the language of the user's input.
+
+**Response Consistency:** Always respond in the same language as the user's input (e.g., if the user asks in English, output the report and suggestions in English; if in Chinese, use Chinese).
+
+**Core Logic:** The internal rules and design specs (like spacing, colors) remain the same regardless of the language.
+
+**For English Users:** When generating violation reports and fix suggestions, translate the "violation description" and "fix suggestion" into English. Keep the code snippets as-is.
 
 # 设计规范走查器技能
 
