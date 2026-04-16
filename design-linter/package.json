@@ -1,0 +1,27 @@
+{
+  "name": "design-linter",
+  "version": "1.0.0",
+  "description": "设计规范走查器 - 自动检测代码是否违反design-system.md中的规范",
+  "main": "design-linter.js",
+  "bin": {
+    "design-linter": "./design-linter.js"
+  },
+  "scripts": {
+    "lint": "node design-linter.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "design-system",
+    "linter",
+    "code-quality",
+    "react",
+    "tailwind",
+    "规范检查"
+  ],
+  "author": "Claude Code",
+  "license": "MIT",
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
