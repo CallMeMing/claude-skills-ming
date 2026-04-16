@@ -36,7 +36,7 @@
 
 ### 快速安装命令 (Mac/Linux):
     
-    'git clone https://github.com/CallMeMing/claude-skills-ming.git && cp -r claude-skills-ming/* ~/.claude/skills/'
+    git clone https://github.com/CallMeMing/claude-skills-ming.git && cp -r claude-skills-ming/* ~/.claude/skills/
 
 ---
 
