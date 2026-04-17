@@ -26,16 +26,18 @@ This repository features a suite of three expert-level skills for Claude Code, s
 
 ### 📦 包含的技能 | Included Skills
 
-1.  **Style-Guardian (样式守护者) - NEW!** 🛡️
-    * **核心功能**：非破坏性修改。它会先读取 `tokens.css`，生成“变更风险评估表”，在你回复“执行”前绝不动代码。
-    * **Feature**: Non-destructive edits with a "Confirmation Lock." Pre-scans design tokens and presents a risk assessment table.
-2.  **Component-Guide (智能组件管理)** 🧩
+
+1.  **Component-Guide (智能组件管理)** 🧩
     * **核心功能**：分析需求 -> 搜索现有组件 -> 给出创建策略。
     * **Feature**: Smart component discovery and strategic creation guidance.
-3.  **Design-Linter (设计规范走查)** 📏
+  
+2.  **Design-Linter (设计规范走查)** 📏
     * **核心功能**：走查间距、字体、颜色变量，确保符合 Tailwind v4 规范。
     * **Feature**: Automated visual spec audit for Tailwind v4 & Design Systems.
-
+      
+3.  **Style-Guardian (样式守护者)** 🛡️
+    * **核心功能**：非破坏性修改。它会先读取 `tokens.css`，生成“变更风险评估表”，在你回复“执行”前绝不动代码。
+    * **Feature**: Non-destructive edits with a "Confirmation Lock." Pre-scans design tokens and presents a risk assessment table.
 
 
 ### 🛠️ 快速安装 | Quick Installation (Mac/Linux)
@@ -51,15 +53,17 @@ git clone https://github.com/CallMeMing/claude-skills-ming.git && cp -r claude-s
 ### 💡 使用示例 | Usage Examples
 
 ```bash
-# 安全地修改 A 页面的边距
-/style-guardian "将 A 页面的顶部间距调大一点，注意不要挤压到导航栏"
 
 # 智能分析组件创建策略
 /component-guide "我需要一个带搜索功能的下拉多选框"
 
 # 走查当前组件的视觉规范
 /design-linter --file src/components/Button.tsx
+
+# 安全地修改 A 页面的边距
+/style-guardian "将 A 页面的顶部间距调大一点，注意不要挤压到导航栏"
 ```
+
 
 
 ### 📄 许可证 | License
