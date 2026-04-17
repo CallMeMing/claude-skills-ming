@@ -1,100 +1,59 @@
+# 🤖 Claude Code UI Helpers (3-in-1 Skills)
 
-# 🤖 Claude Code UI Helpers (2-in-1 Skills)
+This repository features a suite of three expert-level skills for Claude Code, specifically designed to tackle three major pain points in frontend development: Component Management, Visual Consistency, and Style Risk Control. 
 
-This repository contains two expert-level skills designed for **Claude Code**, focusing on solving "Component Selection" and "Visual Inconsistency" in modern frontend development.
+### Claude Code 智能 UI 助手 (3-in-1 Skills)
 
-### 🚀 Key Use Cases
-
-* **Scenario A: Should I create a new component?**
-    * Use the `Component-Guide` skill. It automatically scans your codebase to decide whether to "Reuse," "Refactor," or "Create" a component, preventing code duplication.
-* **Scenario B: Getting UI bugs from your designer?**
-    * Use the `Design-Linter` skill. It detects non-standard spacing (e.g., `mt-[2px]`), enforces icon coloring protocols, and validates design tokens/variables.
+本仓库包含三套专为 Claude Code 打造的专家级技能，旨在解决前端开发中“组件管理”、“视觉规范”以及“样式风险控制”的三大痛点。
 
 
-
-### 📦 Included Skills
-
-1.  **Component-Guide (Smart Component Management)**
-    * **Features**: Requirement analysis -> Similarity search -> Decision making.
-    * **Tech Stack**: Optimized for React + TS, Radix UI, and Tailwind v4.
-2.  **Design-Linter (Visual Spec Audit)**
-    * **Features**: Auto-detects CSS variable violations, enforces semantic typography, and supports CI/CD integration.
-    * **Output**: Supports Markdown reports, JSON, and simple text.
-
-
-### 🛠️ Quick Installation (Mac/Linux)
-
-Copy and paste the following command into your terminal to clone and install these skills to your Claude Code directory:
-
-```bash
-git clone https://github.com/CallMeMing/claude-skills-ming.git && cp -r claude-skills-ming/design-linter claude-skills-ming/component-guide ~/.claude/skills/
-```
-
-*Note: For Windows users, please manually copy the folders to `C:\Users\<YourUsername>\.claude\skills\`.*
-
-
-
-### 💡 Usage Examples
-
-```bash
-# Analyze if a new component is needed
-/component-guide "I need a searchable multi-select dropdown"
-
-# Audit visual specs for a specific file
-/design-linter --file src/components/Button.tsx
-```
-
-
-
-### 📄 License
-MIT License - Feel free to use and contribute.
 
 ---
 
-# 🤖 Claude Code 智能 UI 助手 (2-in-1 Skills)
-
-本仓库包含两套专为 **Claude Code** 打造的专家级技能，旨在解决前端开发中“组件选型难”和“视觉还原不标准”的两大痛点。
-
-### 🚀 解决的问题场景
+### 🚀 解决的问题场景 | Key Use Cases
 
 * **场景 A：犹豫要不要新建组件？**
-    * 使用 `Component-Guide` 助手。它会自动扫描现有代码库，智能判断该“复用旧组件”、“修改现有组件”还是“创建新组件”，拒绝重复造轮子。
-* **场景 B：UI 还原度总是被 UI 提 Bug？**
-    * 使用 `Design-Linter` 走查器。自动检测代码中的间距、字体、颜色是否符合设计规范（如：禁止硬编码颜色、强制使用语义化字体类）。
+    * 使用 `Component-Guide`。它智能判断该“复用”、“修改”还是“新建”，拒绝重复造轮子。
+    * *Decision-making: Reuse, Refactor, or Create? Let `Component-Guide` decide.*
+* **场景 B：UI 还原度总是被提 Bug？**
+    * 使用 `Design-Linter`。自动检测硬编码数值，强制执行设计系统规范。
+    * *Audit: Catch hardcoded values and enforce design tokens automatically.*
+* **场景 C：想改样式又怕改坏了？**
+    * 使用 `Style-Guardian` 。**先分析影响、再给出方案、等待确认**。它为你提供“逻辑刹车”，确保复杂页面的样式调整安全可控。
+    * *Safe Edit: Impact analysis & "Confirmation Lock" before any CSS changes.*
 
 
 
-### 📦 包含的技能 (Skills)
+### 📦 包含的技能 | Included Skills
 
-1.  **Component-Guide (智能组件管理)**
-    * **核心功能**：需求分析 -> 相似组件搜索 -> 决策建议。
-    * **技术栈**：适配 React + TS, Radix UI, Tailwind v4。
-2.  **Design-Linter (设计规范走查)**
-    * **核心功能**：自动发现 `mt-[2px]` 等非标间距，强制 Icon 着色协议，校验颜色变量。
-    * **支持格式**：Markdown 报告、JSON、CI/CD 集成。
-
-
-
-### 🛠️ 快速安装
-
-1.  **克隆/下载仓库**：
-    `git clone https://github.com/你的用户名/你的仓库名.git`
-2.  **部署到 Claude**：
-    将本仓库中的两个文件夹（包含 `SKILL.md` 的文件夹）移动到你的本地技能目录：
-    * **Mac/Linux**: `~/.claude/skills/`
-    * **Windows**: `C:\Users\用户名\.claude\skills\`
-3.  **激活**：
-    在 Claude Code 终端输入 `/reload`。
-
-### 快速安装命令 (Mac/Linux):
-    
-    git clone https://github.com/CallMeMing/claude-skills-ming.git && cp -r claude-skills-ming/* ~/.claude/skills/
+1.  **Style-Guardian (样式守护者) - NEW!** 🛡️
+    * **核心功能**：非破坏性修改。它会先读取 `tokens.css`，生成“变更风险评估表”，在你回复“执行”前绝不动代码。
+    * **Feature**: Non-destructive edits with a "Confirmation Lock." Pre-scans design tokens and presents a risk assessment table.
+2.  **Component-Guide (智能组件管理)** 🧩
+    * **核心功能**：分析需求 -> 搜索现有组件 -> 给出创建策略。
+    * **Feature**: Smart component discovery and strategic creation guidance.
+3.  **Design-Linter (设计规范走查)** 📏
+    * **核心功能**：走查间距、字体、颜色变量，确保符合 Tailwind v4 规范。
+    * **Feature**: Automated visual spec audit for Tailwind v4 & Design Systems.
 
 
 
-### 💡 使用示例
+### 🛠️ 快速安装 | Quick Installation (Mac/Linux)
+
+Copy and paste the following command into your terminal:
 
 ```bash
+git clone https://github.com/CallMeMing/claude-skills-ming.git && cp -r claude-skills-ming/style-guardian claude-skills-ming/design-linter claude-skills-ming/component-guide ~/.claude/skills/
+```
+
+
+
+### 💡 使用示例 | Usage Examples
+
+```bash
+# 安全地修改 A 页面的边距
+/style-guardian "将 A 页面的顶部间距调大一点，注意不要挤压到导航栏"
+
 # 智能分析组件创建策略
 /component-guide "我需要一个带搜索功能的下拉多选框"
 
@@ -103,5 +62,5 @@ MIT License - Feel free to use and contribute.
 ```
 
 
-### 📄 许可证
-MIT License - 欢迎自由使用及贡献。
+### 📄 许可证 | License
+MIT License
